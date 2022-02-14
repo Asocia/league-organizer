@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">League Organizer</string>
+    <string name="choose_number_of_teams">Choose Number of Teams</string>
+    <string name="draw_fixture">Draw fixture</string>
 </resources>
