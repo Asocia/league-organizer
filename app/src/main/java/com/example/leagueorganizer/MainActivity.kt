@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.NumberPicker
+import com.example.leagueorganizer.teams.TeamsFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,12 +18,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnDrawFixture).apply {
-            setOnClickListener { drawFixture()
-            }
+            setOnClickListener { showFragment() }
         }
-    }
 
-    private fun drawFixture() {
-        TODO("Not yet implemented")
+    }
+    private fun showFragment() {
+        val fragment = TeamsFragment()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frameLayout, fragment).commit()
     }
 }
