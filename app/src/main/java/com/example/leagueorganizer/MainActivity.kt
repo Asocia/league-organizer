@@ -23,7 +23,11 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun showFragment() {
+        val bundle = Bundle()
+        val numberPicker = findViewById<NumberPicker>(R.id.npNumOfTeams)
         val fragment = TeamsFragment()
+        bundle.putString("numOfTeams",numberPicker.value.toString())
+        fragment.arguments = bundle
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frameLayout, fragment).commit()
     }

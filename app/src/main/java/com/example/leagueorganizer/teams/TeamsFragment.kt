@@ -15,8 +15,10 @@ class TeamsFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentTeamsBinding.inflate(inflater)
+        val bundle = arguments
+        val numOfTeams = bundle!!.getString("numOfTeams").toString()
         val viewModel: TeamsViewModel by viewModels()
-        viewModel.getTeamNames()
+        viewModel.getTeamNames(quantity = numOfTeams)
         binding.lifecycleOwner = this
 
         binding.viewModel = viewModel
