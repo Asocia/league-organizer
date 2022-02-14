@@ -11,12 +11,12 @@ class TeamsViewModel: ViewModel() {
     private val _status = MutableLiveData<String>()
 
     val status: LiveData<String> = _status
-    
-    fun getTeamNames(quantity: String) {
+
+    fun getTeamNames() {
         viewModelScope.launch {
 
             try {
-                val listResult = TeamsApi.RETROFIT_SERVICE.getTeamNames("surname", quantity)
+                val listResult = TeamsApi.RETROFIT_SERVICE.getTeamNames("surname", "10")
                 _status.value = listResult.toString()
             } catch (e: Exception) {
                 _status.value = "Failure: ${e.message}"
