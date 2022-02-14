@@ -13,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.leagueorganizer.teams.TeamsFragment">
+        tools:context="com.example.leagueorganizer.teams.TeamNamesFragment">
 
         <TextView
             android:layout_width="wrap_content"

@@ -6,15 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.leagueorganizer.databinding.FragmentTeamsBinding
+import com.example.leagueorganizer.databinding.FragmentTeamNamesBinding
 
-class TeamsFragment: Fragment() {
+class TeamNamesFragment: Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentTeamsBinding.inflate(inflater)
+        val binding = FragmentTeamNamesBinding.inflate(inflater)
         val bundle = arguments
         val numOfTeams = bundle!!.getString("numOfTeams").toString()
         val viewModel: TeamsViewModel by viewModels()
